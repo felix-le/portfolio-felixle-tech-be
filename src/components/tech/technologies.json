@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_tech_technologies",
+  "info": {
+    "displayName": "technologies",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "frontend": {
+      "type": "string"
+    },
+    "backend": {
+      "type": "string"
+    },
+    "database": {
+      "type": "string"
+    },
+    "others": {
+      "type": "string"
+    }
+  }
+}

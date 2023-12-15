@@ -362,6 +362,51 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiProjectsProjects extends Schema.CollectionType {
+  collectionName: 'projects_plural';
+  info: {
+    singularName: 'projects';
+    pluralName: 'projects-plural';
+    displayName: 'projects';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    thumbnail: Attribute.Media;
+    media: Attribute.Media;
+    title: Attribute.String;
+    description: Attribute.Blocks;
+    subtitle: Attribute.String;
+    endDate: Attribute.Date;
+    startDate: Attribute.Date;
+    status: Attribute.String;
+    clients: Attribute.String;
+    organization: Attribute.String;
+    role: Attribute.String;
+    teamSize: Attribute.String;
+    productionUrl: Attribute.String;
+    githubUrl: Attribute.String;
+    tech: Attribute.Component<'tech.technologies'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::projects.projects',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::projects.projects',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -687,6 +732,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::projects.projects': ApiProjectsProjects;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;

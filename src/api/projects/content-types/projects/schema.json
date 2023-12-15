@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects_plural",
+  "info": {
+    "singularName": "projects",
+    "pluralName": "projects-plural",
+    "displayName": "projects",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "status": {
+      "type": "string"
+    },
+    "clients": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "teamSize": {
+      "type": "string"
+    },
+    "productionUrl": {
+      "type": "string"
+    },
+    "githubUrl": {
+      "type": "string"
+    },
+    "tech": {
+      "displayName": "technologies",
+      "type": "component",
+      "repeatable": false,
+      "component": "tech.technologies"
+    }
+  }
+}
