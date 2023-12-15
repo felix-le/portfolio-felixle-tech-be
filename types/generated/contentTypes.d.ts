@@ -389,6 +389,8 @@ export interface ApiProjectsProjects extends Schema.CollectionType {
     productionUrl: Attribute.String;
     githubUrl: Attribute.String;
     tech: Attribute.Component<'tech.technologies'>;
+    order_number: Attribute.Integer;
+    isHighlight: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
