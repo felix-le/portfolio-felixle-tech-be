@@ -21,7 +21,10 @@ module.exports = [
     config: {
       enabled: false,
       headers: "*",
-      origin: ["http://localhost", "https://felixle-portfolio.netlify.app"],
+      origin: [
+        "http://localhost:1338",
+        "https://felixle-portfolio.netlify.app",
+      ],
     },
   },
   "strapi::logger",
