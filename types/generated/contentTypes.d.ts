@@ -391,6 +391,7 @@ export interface ApiProjectsProjects extends Schema.CollectionType {
     tech: Attribute.Component<'tech.technologies'>;
     order_number: Attribute.Integer;
     isHighlight: Attribute.Boolean;
+    tags: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
