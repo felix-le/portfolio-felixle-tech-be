@@ -19,12 +19,10 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      enabled: false,
-      headers: "*",
-      origin: [
-        "http://localhost:1338",
-        "https://felixle-portfolio.netlify.app",
-      ],
+      origin: ["*"],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+      keepHeaderOnError: true,
     },
   },
   "strapi::logger",
