@@ -20,7 +20,8 @@ module.exports = [
     config: {
       settings: {
         cors: {
-          origin: ["*"], // allow all
+          enabled: false,
+          headers: "*",
         },
       },
     },
