@@ -14,16 +14,12 @@ module.exports = [
       },
     },
   },
-
   {
     name: "strapi::cors",
     config: {
-      settings: {
-        cors: {
-          enabled: false,
-          headers: "*",
-        },
-      },
+      enabled: true,
+      headers: "*",
+      origin: ["http://localhost", "https://felixle-portfolio.netlify.app"],
     },
   },
 
